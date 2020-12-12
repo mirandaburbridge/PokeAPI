@@ -1,0 +1,47 @@
+@font-face {
+    font-family: pokemonSolid;
+    src: url("Assets/PokemonSolid.ttf");
+}
+
+body {
+    background-image: url("Assets/pexels-vincent-ma-janssen-1310847.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #0b2d15;
+}
+
+h1 {
+    font-family: pokemonSolid;
+    color: #E53167;
+    text-align: center;
+    font: outline;
+}
+
+.wrapper {
+    font-family: Arial, Helvetica, sans-serif;
+    color: yellow;
+    text-align: center;
+}
+
+.search {
+    background-color: #B2D3EA;
+    border: none;
+}
+
+.submit {
+    background-color: #0001EC;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5%;
+}
+
+.submit:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.results {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
