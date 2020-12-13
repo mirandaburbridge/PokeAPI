@@ -23,6 +23,10 @@ function fetchResults(e) {
             let abilities = json.abilities;
             let stats = json.stats;
 
+            while (pokemonList.firstChild) {
+                pokemonList.removeChild(pokemonList.firstChild);
+            }
+
             let listItem1 = document.createElement('li');
             listItem1.innerHTML = '<p>' + 'Name: ' + pokemon + '</p>';
             pokemonList.appendChild(listItem1);
