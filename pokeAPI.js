@@ -6,6 +6,7 @@ const searchTerm = document.querySelector('.search');
 const searchForm = document.querySelector('form');
 const submitBtn = document.querySelector('.submit');
 const section = document.querySelector('section');
+const image = document.querySelector('.image');
 
 searchForm.addEventListener('submit', fetchResults);
 
@@ -27,6 +28,10 @@ function fetchResults(e) {
                 pokemonList.removeChild(pokemonList.firstChild);
             }
 
+            while (image.firstChild) {
+                image.removeChild(image.firstChild);
+            }
+
             let listItem1 = document.createElement('li');
             listItem1.innerHTML = '<p>' + 'Name: ' + pokemon + '</p>';
             pokemonList.appendChild(listItem1);
@@ -43,12 +48,7 @@ function fetchResults(e) {
                 stat.innerHTML = '<p>' + 'Stat: ' + stats[s].stat.name + '</p>'
                 pokemonList.appendChild(stat);
             }
+
+            image.src = json.sprites.front_default;
         });
 };
-
-function checkform() {
-    if (document.getElementsByClassName('.search').value == '') {
-        console.log('empty');
-    }
-    return true;
-}
